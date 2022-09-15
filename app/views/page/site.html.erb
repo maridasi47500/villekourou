@@ -1,0 +1,22 @@
+
+<div class="container">
+	<div class="shell">
+		<div class="_breadcrumbs">		
+	<span><span><a href="/">Accueil</a> <%=request.path.split('/').without('').map{|x|"&nbsp; <i class=\"ico-gray-small-arrow-right\"></i> &nbsp;"+link_to_unless_current(x.title,x.url) {"<span class=\"breadcrumb_last\" aria-current=\"page\">#{x.title}</span>"}}.join('').html_safe%></span></span>	<div style="padding-bottom: 20px;"></div>
+</div>
+
+		
+		<div class="main main-secondary">
+			<%=render "sidebar"%>			
+			<div class="content single">			
+				<h2 class="main-title">
+					<span><%=@page.title%></span>
+				</h2>
+			    
+			    <%=@page.content.html_safe%>
+			    
+			
+			</div><!-- /.content -->
+		</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

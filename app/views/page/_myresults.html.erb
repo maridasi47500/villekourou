@@ -1,0 +1,7 @@
+<%results.each do |h|%>
+        <%if h.is_a?(News)%>
+        <%=render "news/news", news: h%>
+        <%else%>
+        <%=render "agenda/event", event: h%>
+        <%end%>
+        <%end%>

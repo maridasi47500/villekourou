@@ -1,0 +1,12 @@
+<figure class="gallery-item">		    		    
+
+<div class="phototheque-icon">
+<a href="<%=photo.urla%>">
+    <img src="<%=photo.url%>" alt="<%=photo.title%>">
+</a>
+</div>
+
+<figcaption class="wp-caption-text gallery-caption">
+<%if photo.title && !photo.title.empty?%><a href="<%=photo.urla%>"><%=photo.title%></a><%end%>
+</figcaption><!-- /.wp-caption-text gallery-caption -->
+</figure>

@@ -1,0 +1,12 @@
+<div class="widget widget-links">
+		
+			<h2 class="main-title main-title-white">
+			<span></i> Emploi/insertion</span>
+		</h2>
+
+<ul class="list-links">
+<%@emplois.each do |job|%>
+<li><a href="<%=job_path(title:job.url)%>"><i class="ico-small-red-arrow-right"></i> <%=job.title%></a></li>
+<%end%>
+</ul>
+</div>	

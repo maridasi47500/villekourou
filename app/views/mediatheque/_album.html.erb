@@ -1,0 +1,16 @@
+<figure class="gallery-item">
+	<div class="meta meta-primary">
+		<div class="date">
+			<%=l(album.date,format: :mediatheque)%>		</div><!-- /.date -->
+	</div><!-- /.meta -->
+	
+	<div class="phototheque-icon">
+		<a href="<%=album_path(title: album.url)%>">
+			<img src="<%=album.photos[0].urla%>" alt="">
+		</a>
+	</div>
+
+	<figcaption class="wp-caption-text gallery-caption">
+		<a href="<%=album_path(title: album.url)%>"><%=album.title%></a>
+	</figcaption><!-- /.wp-caption-text gallery-caption -->
+</figure>

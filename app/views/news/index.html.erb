@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="shell">
+		<div class="_breadcrumbs">		
+	<span><span><a href="/">Accueil</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span class="breadcrumb_last" aria-current="page">Actualités</span></span></span>	<div style="padding-bottom: 20px;"></div>
+</div>
+
+		
+		<div class="main main-secondary">
+			<%=render "sidebar"%>			
+			<div class="content">
+				<div class="widget widget_recent_entries">
+					<h2 class="main-title">
+						<span>Toutes les actualités</span>
+					</h2>
+					
+				    <ul>
+                                    <%=render collection: @news,as: :news,partial:"news/news"%>
+				    </ul>
+				    
+				    <div class="spinner">
+				    	<img src="/css/images/spinner.svg" alt="">
+				    </div><!-- /.spinner -->
+				    
+				    <div class="widget-actions">
+				    	<a href="#" class="btn btn-block btn-load-more">
+							<i class="ico-calendar-white"></i>							
+							Voir plus d’actualités
+						</a>
+				    </div><!-- /.widget-actions -->
+				</div>
+			</div><!-- /.content -->
+		</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

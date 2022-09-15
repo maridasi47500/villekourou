@@ -1,0 +1,14 @@
+<figure class="gallery-item">
+	<div class="meta meta-primary">
+		<div class="date">
+			<%=l(video.date,format: :mediatheque)%>		</div><!-- /.date -->
+	</div><!-- /.meta -->
+	
+			<!-- Your embedded video player code -->
+		<div class="fb-video gallery-icon" data-href="<%=video.fbvideo%>" data-width="406" data-show-text="false"></div>		
+	
+	<figcaption class="wp-caption-text gallery-caption">
+		<a href="<%=video_path(title: video.url)%>"><%=video.title%></a>
+	</figcaption><!-- /.wp-caption-text gallery-caption -->
+</figure>
+

@@ -1,0 +1,31 @@
+
+<div class="container">
+	<div class="shell">
+		<div class="_breadcrumbs">		
+	<span><span><a href="/">Accueil</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span class="breadcrumb_last" aria-current="page"><%=@cat.title%></span></span></span>	<div style="padding-bottom: 20px;"></div>
+</div>
+
+		
+		<div class="main main-secondary">
+			
+
+
+<%=render "sidebarphoto"%>
+			<div class="content">
+				<section class="section">
+					<h2 class="main-title">
+						<span>
+							Album photo : <%=@cat.title%>						</span>
+					</h2>
+					
+					<div class="gallery">
+
+						
+<%=render collection: @cat.albums, as: :album,partial:"mediatheque/album"%>
+
+					</div>
+				</section><!-- /.section -->
+			</div><!-- /.content -->
+		</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

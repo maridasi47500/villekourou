@@ -1,0 +1,39 @@
+
+<div class="container">
+	<div class="shell">
+		<div class="_breadcrumbs">		
+	<span><span><a href="/">Accueil</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span><a href="/actualites/">Actualités</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span><%=link_to(@news.categories[0].name, newscat_path(title: @news.categories[0].url))%> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span class="breadcrumb_last" aria-current="page"><%=@news.title%></span></span></span></span></span>	<div style="padding-bottom: 20px;"></div>
+</div>
+
+		
+		<div class="main main-secondary">
+			<%=render "sidebar"%>			
+			<div class="content single">				
+				<h2 class="main-title">
+					<span><%=@news.title%></span>
+				</h2>
+                                <%if @news.image%>
+				<div class="m-post-image">		
+
+					<a href="<%=@news.imagelink%>">
+						<img src="<%=@news.image%>" alt="">
+					</a>
+
+					
+				</div>
+                                <%end%>
+				<div>
+<%if @news.categories.length > 0%>
+<p><strong>Catégorie</strong> : <%=@news.categories.map {|h|link_to( h.name,newscat_path(title: h.url), {title:""}).html_safe}.join(', ').html_safe%>	
+</p>
+<%end%>
+<p><strong>Posté le</strong> : <%=l(@news.date, format: :postele)%></p>
+				</div>
+			    
+			    <%=@news.content.html_safe%>
+			    
+			
+			</div><!-- /.content -->
+		</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

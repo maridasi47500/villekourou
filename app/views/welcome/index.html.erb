@@ -1,0 +1,450 @@
+<div class="container">
+	<div class="shell">
+		<div class="intro">
+			<div class="row">
+				<div class="col col-size1">
+					<div class="slider">
+						<div class="slider-clip">
+														<ul class="slides">
+														<%=render collection: @eventsnews, as: :post,partial: "welcome/eventnews" %>
+																<!-- /.slide -->
+							</ul>
+								
+							<!-- /.slides -->
+						</div>
+						<!-- /.slider-clip -->
+					</div>
+					<!-- /.slider -->
+				</div>
+				<!-- /.col -->
+				
+				<div class="col col-size2">
+					<div class="widget widget_recent_entries">
+						<h3>Agenda de la ville de Kourou</h3>
+						
+						<ul>
+<%=render collection: @events, as: :event, partial: "welcome/event"%>
+															</ul>
+					</div><!-- /.widget widget_recent_entries -->
+					
+					<a href="/agenda/" class="btn btn-block">
+						<i class="ico-calendar-white"></i>
+						
+						Voir l'agenda
+					</a>
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.intro -->
+		
+		<div class="main-home">
+			<section class="section section-primary">
+				<div class="section-content">
+					<div class="widget widget_categories">
+						<ul>
+															<li>
+									<a href="https://www.marchesonline.com/">
+										Marchés publics										
+																					<img src="https://www.ville-kourou.fr/wp-content/uploads/2022/08/298882277_5581299865248584_4770841465329758869_n-273x182.jpg" height="182" width="273" alt="">
+																			</a>
+									
+																			<ul class="list-links">
+																						<li>
+												<a href="https://www.facebook.com/ville.kourou/photos/pcb.5581300621915175/5581299888581915/?locale=fr_FR">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Rebouchage des nids-de-poule												</a>
+											</li>
+																						<li>
+												<a href="https://www.marchesonline.com/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Consultez les appels d'offres												</a>
+											</li>
+																					</ul>										
+																		<!-- /.list-links -->
+								</li>								
+																						<li>
+									<a href="https://www.ville-kourou.fr/agenda-type/vie-municipale/">
+										Prévention sécurité										
+																					<img src="https://www.ville-kourou.fr/wp-content/uploads/2022/01/vhu2022-273x182.jpg" height="182" width="273" alt="">
+																			</a>
+									
+																			<ul class="list-links">
+																						<li>
+												<a href="https://www.facebook.com/ville.kourou/photos/pcb.5027139510664625/5027132243998685/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													L'opération VHU 2022 démarre !												</a>
+											</li>
+																						<li>
+												<a href="https://www.facebook.com/ville.kourou/photos/a.849601621751789/5028125110566065/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Pas de vente d'alcool sur les plages												</a>
+											</li>
+																					</ul>										
+																		<!-- /.list-links -->
+								</li>								
+																						<li>
+									<a href="">
+										La Mairie										
+																					<img src="https://www.ville-kourou.fr/wp-content/uploads/2022/04/mairie22-273x182.jpg" height="182" width="273" alt="">
+																			</a>
+									
+																			<ul class="list-links">
+																						<li>
+												<a href="https://www.ville-kourou.fr/gestion-voiries-communales/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Gestion voiries communales												</a>
+											</li>
+																						<li>
+												<a href="https://www.facebook.com/monewsguyane/videos/437581671353406">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Lettre ouverte au Président Macron												</a>
+											</li>
+																					</ul>										
+																		<!-- /.list-links -->
+								</li>								
+																						<li>
+									<a href="">
+										Sports & loisirs										
+																					<img src="https://www.ville-kourou.fr/wp-content/uploads/2022/05/vck-memorial2-273x182.jpg" height="182" width="273" alt="">
+																			</a>
+									
+																			<ul class="list-links">
+																						<li>
+												<a href="">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Le mémorial des défunts du vck												</a>
+											</li>
+																						<li>
+												<a href="https://www.ville-kourou.fr/agenda/scenes-ouvertes/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Lancement de scènes ouvertes												</a>
+											</li>
+																					</ul>										
+																		<!-- /.list-links -->
+								</li>								
+																						<li>
+									<a href="https://www.ville-kourou.fr/agenda-type/culture/">
+										Histoire & culture										
+																					<img src="https://www.ville-kourou.fr/wp-content/uploads/2022/07/Miss-Guyane-2022-273x182.jpg" height="182" width="273" alt="">
+																			</a>
+									
+																			<ul class="list-links">
+																						<li>
+												<a href="https://www.ville-kourou.fr/miss-guyane-2022/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Miss Guyane 2022												</a>
+											</li>
+																						<li>
+												<a href="https://www.ville-kourou.fr/agenda/et-si-cetait-toi-la-prochaine-miss-guyane/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													Deviens la prochaine Miss Guyane												</a>
+											</li>
+																					</ul>										
+																		<!-- /.list-links -->
+								</li>								
+																						<li>
+									<a href="https://www.ville-kourou.fr/">
+										DANS MA VILLE										
+																					<img src="https://www.ville-kourou.fr/wp-content/uploads/2022/06/grandebrocante22-273x182.jpg" height="182" width="273" alt="">
+																			</a>
+									
+																			<ul class="list-links">
+																						<li>
+												<a href="https://www.facebook.com/ville.kourou/photos/pcb.5433012900077282/5433012190077353">
+													<i class="ico-small-red-arrow-right"></i>
+
+													La grande brocante												</a>
+											</li>
+																						<li>
+												<a href="https://www.ville-kourou.fr/dans-ma-ville/demandes-de-subvention/">
+													<i class="ico-small-red-arrow-right"></i>
+
+													La convention CNES 2022												</a>
+											</li>
+																					</ul>										
+																		<!-- /.list-links -->
+								</li>								
+							
+						</ul>
+					</div>
+					<!-- /.widget widget_categories -->
+				</div>
+				<!-- /.section-content -->
+				
+				<div class="section-aside">
+					<div class="widget widget-accordion">
+						<div class="accordion">
+							<h2 class="main-title main-title-green">
+								<span>Dans ma ville</span>
+							</h2>
+							
+														
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>LES RENDEZ-VOUS DES AÎNÉS</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+																
+								<div class="accordion-body">
+									<ul class="list-links list-links-green">
+																				<li>
+											<a href="https://www.ville-kourou.fr/les-rendez-vous-des-aines/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Les rendez-vous des aînés											</a>										
+										</li>
+																			</ul>
+									<!-- /.list-links list-links-green -->
+								</div>									
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>ÉTAT CIVIL</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+																
+								<div class="accordion-body">
+									<ul class="list-links list-links-green">
+																				<li>
+											<a href="https://www.ville-kourou.fr/demande-dacte-detat-civil-mode-demploi-en-video/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Demande d'acte : mode d'emploi											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/la-mairie/service-population/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Formulaire en ligne											</a>										
+										</li>
+																			</ul>
+									<!-- /.list-links list-links-green -->
+								</div>									
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>INFOS PRATIQUES</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+																
+								<div class="accordion-body">
+									<ul class="list-links list-links-green">
+																				<li>
+											<a href="https://www.ville-kourou.fr/la-ville-met-un-numero-dappel-a-la-disposition-des-kourouciens/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Face aux intempéries											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/poubelle-menagere-et-collecte-des-dechets/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Collectes des déchets											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/infos-pratiques/numeros-utiles/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Numéros utiles											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/infos-pratiques/marches/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Horaires des marchés											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/alerte-sdge/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Alertes sgde											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/les-bons-gestes-a-adopter-durant-les-periodes-de-fortes-intemperies/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Fortes intempéries											</a>										
+										</li>
+																			</ul>
+									<!-- /.list-links list-links-green -->
+								</div>									
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>SANTÉ</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+																
+								<div class="accordion-body">
+									<ul class="list-links list-links-green">
+																				<li>
+											<a href="https://www.guyane.ars.sante.fr/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												L'Agence Régionale de Santé											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ch-kourou.fr/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Le Centre Hospitalier de Kourou											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/dans-ma-ville/sante/pharmacies/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Vos pharmacies											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/dans-ma-ville/sante/liens-utiles/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Les autres partenaires santé de Guyane											</a>										
+										</li>
+																				<li>
+											<a href="https://www.ville-kourou.fr/dossier-covid-19/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												DOSSIER COVID-19											</a>										
+										</li>
+																			</ul>
+									<!-- /.list-links list-links-green -->
+								</div>									
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>ALLÔ KOUROU</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+																
+								<div class="accordion-body">
+									<ul class="list-links list-links-green">
+																				<li>
+											<a href="https://www.ville-kourou.fr/dans-ma-ville/allo-kourou/"> 
+												<i class="ico-small-green-arrow-right"></i>
+
+												Allô Kourou											</a>										
+										</li>
+																			</ul>
+									<!-- /.list-links list-links-green -->
+								</div>									
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>PAYER LA CANTINE SCOLAIRE</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>FERMETURES PRÉVENTIVES DES ÉCOLES</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>LA TRADITIONNELLE TOURNÉE DE LA SAINT-SYLVESTRE</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>DEVENEZ LA NOUVELLE GENERATION DU SPORT!</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+															</div>
+														<div class="accordion-section">
+								<div class="accordion-head">
+									<h3>Déclaration de projet</h3>									
+									
+									<i class="ico-small-green-arrow-right"></i>
+								</div><!-- /.accordion-head -->
+								
+															</div>
+														<!-- /.accordion-section -->
+						</div>
+						<!-- /.accordion -->
+					</div>
+					<!-- /.widget widget-nav -->
+				</div>
+				<!-- /.section-aside -->
+			</section>
+			<!-- /.section-primary -->
+			
+							
+				<section class="section section-secondary">
+					<div class="section-content">
+						<div class="widget widget-media">
+							<h2 class="main-title main-title-white">
+								<span>En images</span>
+							</h2>
+							
+							<div class="media">
+								<div class="video">
+									<!-- Load Facebook SDK for JavaScript -->
+									<div id="fb-root"></div>
+									<script>(function(d, s, id) {
+									  var js, fjs = d.getElementsByTagName(s)[0];
+									  if (d.getElementById(id)) return;
+									  js = d.createElement(s); js.id = id;
+									  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+									  fjs.parentNode.insertBefore(js, fjs);
+									}(document, 'script', 'facebook-jssdk'));</script>
+
+									<!-- Your embedded video player code -->
+									<div class="fb-video" data-href="https://www.facebook.com/ville.kourou/videos/363661222535021" data-width="850" data-show-text="false"></div>
+								</div><!-- /.video -->
+								
+								<div class="media-actions">
+									<a href="/phototheque/" class="btn">Voir toutes les photos</a>
+									
+									<a href="/videos/" class="btn">Voir toutes les vidéos</a>
+								</div><!-- /.media-actions -->
+							</div><!-- /.media -->
+						</div><!-- /.widget widget-media -->
+					</div><!-- /.section-content -->
+					
+					<div class="section-aside">
+						<div class="widget widget-links">
+		
+			<h2 class="main-title main-title-white">
+			<span></i> Emploi/insertion</span>
+		</h2>
+
+					<ul class="list-links">
+							<%@emplois.each do |job|%>
+<li><a href="<%=job.url%>"><i class="ico-small-red-arrow-right"></i> <%=job.title%></a></li>
+<%end%>
+</ul>
+			</div>					</div>
+				</section>	
+					</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

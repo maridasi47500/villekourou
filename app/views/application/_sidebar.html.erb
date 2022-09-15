@@ -1,0 +1,52 @@
+<div class="sidebar">
+	<ul class="widgets">
+		<div class="widget widget-accordion">
+			<div class="accordion">
+				<h2 class="main-title main-title-green">
+					Agenda de Kourou
+				</h2>
+
+				<%@cats.each do |cat|%>
+					<div class="accordion-section">
+						<div class="accordion-head">
+							<h3><%=cat.name%></h3>
+							
+							<i class="ico-small-green-arrow-right"></i>
+						</div><!-- /.accordion-head -->
+						
+						<div class="accordion-body">
+
+								
+
+														<ul class="list-links list-links-green">
+										
+                                                                                                                <%cat.events.each do |event|%>
+                                              <li>
+									<a href="<%=event_path(title: event.url.to_s)%>">
+										<i class="ico-small-green-arrow-right"></i>
+																				 
+										<%=highlight(l(event.begindate,format: :begindate), l(event.begindate,format: :begindate), highlighter: '<strong>\1</strong>') rescue nil%> - <%=highlight(l(event.enddate,format: :begindate), l(event.enddate,format: :begindate), highlighter: '<strong>\1</strong>') rescue nil%>
+										<%=event.title%>									</a>
+								</li>
+                                                                <%end%>
+                                                                
+															</ul> <!-- /.list-links list-links-green -->
+													</div>
+					</div><!-- /.accordion-section -->
+					<%end%>				
+                                        
+				<div class="accordion-section">
+					<a href="/agenda/" class="s-all-agenda">
+					<div class="accordion-head">
+						<h3>Voir l'agenda</h3>
+					</div>
+					</a>
+				</div>
+				
+			</div><!-- /.accordion -->
+		</div><!-- /.widget -->
+<%=render "emploiinsertion"%>
+			
+</ul>
+
+</div><!-- /.sidebar -->	

@@ -1,0 +1,39 @@
+		
+<div class="container">
+	<div class="shell">
+		<div class="_breadcrumbs">		
+	<span><span><a href="/">Accueil</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span><a href="/agenda/">Agenda</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span class="breadcrumb_last" aria-current="page"><%=@event.title%></span></span></span></span>	<div style="padding-bottom: 20px;"></div>
+</div>
+
+		
+		<div class="main main-secondary">
+			<%=render "sidebar"%>			
+			<div class="content single">				
+				<h2 class="main-title">
+					<span><%=@event.title%></span>
+				</h2>
+
+				<div>
+
+					<div class="m-post-image">		
+						<a href="<%=@event.imagelink%>">
+							<img src="<%=@event.image%>" alt="">
+						</a>
+					</div>	
+					
+					<p><strong>Catégorie</strong> : 
+<%=@event.categories.map {|h|link_to( h.name,agendatype_path(title: h.url), {title:""}).html_safe}.join(', ').html_safe%>					
+<%if @event.begindate%><p><strong>Date de début</strong> : <%=l(@event.begindate,format: :begindate)%></p><%end%>
+											<%if @event.enddate%><p><strong>Date de fin</strong> : <%=l(@event.begindate,format: :begindate)%></p><%end%>
+					
+											<%if @event.place%><p><strong>Lieu </strong> : <%=@event.place.name%></p><%end%>
+					
+											<%if @event.manager%><p><strong>Organisateur </strong> : <%=@event.manager.name%></p><%end%>
+									</div>			    	
+					
+			    <%=@event.content.html_safe%>
+				</div>
+			</div><!-- /.content -->
+		</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

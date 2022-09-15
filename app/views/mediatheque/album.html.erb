@@ -1,0 +1,41 @@
+
+
+<div class="container">
+	<div class="shell">
+		<div class="_breadcrumbs">		
+	<span><span><a href="/">Accueil</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span><a href="/phototheque/">Phototh&egrave;que</a> &nbsp; <i class="ico-gray-small-arrow-right"></i> &nbsp; <span class="breadcrumb_last" aria-current="page"><%=@album.title%></span></span></span></span>	<div style="padding-bottom: 20px;"></div>
+</div>
+
+		
+		<div class="main main-secondary">
+			
+
+
+<%=render "sidebarphoto"%>			
+			<div class="content single">				
+				<h2 class="main-title">
+					<span><%=@album.title%></span>
+				</h2>
+
+				<div>
+					<p><strong>Catégorie</strong> : <%=@album.categories.map {|h|link_to( h.title,photocat_path(title: h.url), {title:""}).html_safe}.join(', ').html_safe%>	
+	
+
+<p><strong>Posté le</strong> : <%=l(@album.date,format: :postele)%></p>
+				</div>
+			    
+<%=@album.content.html_safe%>				
+							    <section class="section">
+			    	
+			    	<div class="gallery">
+
+			<%=render collection: @album.photos,as: :photo,partial: "mediatheque/photo"%>
+			    		    	
+			    		    			    	</div>
+			    </section><!-- /.section -->
+			        
+			
+			</div><!-- /.content -->
+		</div><!-- /.main -->
+	</div><!-- /.shell -->
+</div><!-- /.container -->

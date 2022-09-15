@@ -1,0 +1,53 @@
+<%if !news.image%>
+<li>
+	
+	<div class="meta meta-secondary">
+		<div class="date date-secondary">
+			<%=t(news.date,format: :secondary).html_safe%>		</div>
+	</div>
+		
+	<div class="widget-content">
+		<div class="widget-head">
+			    
+			
+			<h2>
+				<a href="<%=news_path(title: news.url)%>"><%=news.title%></a>
+			</h2>
+		</div>
+		
+		<p>
+			<%=news.subtitle.html_safe%> <a href="<%=news_path(title: news.url)%>">En savoir plus</a>
+		</p>
+	</div>
+</li>
+
+<%else%>
+
+<li>
+		<div class="meta meta-primary">
+		<div class="date">
+			<%=t(news.date,format: :secondary).html_safe%>		</div>
+	</div>
+
+	<div class="widget-image">
+		<a href="<%=news_path(title: news.url)%>"><img src="<%=news.image%>" alt=""></a>
+	</div>  
+
+		
+	<div class="widget-content">
+		<div class="widget-head">
+			    
+			
+			
+			<h2>
+				<a href="<%=news_path(title: news.url)%>"><%=news.title%></a>
+			</h2>
+		</div>
+		
+		<p>
+			<%=news.subtitle%> <a href="<%=news_path(title: news.url)%>">En savoir plus</a>
+		</p>
+	</div>
+</li>
+
+<%end%>

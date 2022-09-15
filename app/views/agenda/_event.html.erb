@@ -1,0 +1,54 @@
+<%if !event.image%>
+<li>
+	
+	<div class="meta meta-secondary">
+		<div class="date date-secondary">
+			<%=t(event.date,format: :myevent).to_s.html_safe%>	
+                </div>
+	</div>
+		
+	<div class="widget-content">
+		<div class="widget-head">			  
+			<p class="category">
+				 <%=event.categories.map {|h|link_to( h.name,agendatype_path(title: h.url), {title:""})}.join(', ').html_safe%>			</p>
+			
+			<h2>
+				<a href="<%=event_path(title: event.url)%>"><%=event.title%></a>
+			</h2>
+		</div>
+		
+		<p>
+			<%=event.subtitle%><a href="<%=event_path(title: event.url)%>">En savoir plus</a>
+		</p>
+	</div>
+</li>
+<%else%>
+<li>
+	<div class="meta meta-primary">
+		<div class="date">
+													 
+			<%=t(event.date,format: :myevent).to_s.html_safe%>	
+		</div>
+	</div>
+
+	<div class="widget-image">
+		<a href="<%=event_path(title: event.url)%>"><img src="<%=event.image%>" alt=""></a>
+	</div>  
+
+		
+	<div class="widget-content">
+		<div class="widget-head">			  
+			<p class="category">
+				 <%=event.categories.map {|h|link_to( h.name,agendatype_path(title: h.url), {title:""})}.join(', ').html_safe%>			</p>
+			
+			<h2>
+				<a href="<%=event_path(title: event.url)%>"><%=event.title%></a>
+			</h2>
+		</div>
+		
+		<p>
+			<%=event.subtitle%><a href="<%=event_path(title: event.url)%>">En savoir plus</a>
+		</p>
+	</div>
+</li>
+<%end%>

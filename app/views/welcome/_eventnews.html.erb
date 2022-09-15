@@ -1,0 +1,13 @@
+		<li class="slide" style="background-image:url(<%=post.imagelink%>)">
+									<div class="meta ">
+																				<!-- /.date -->
+									</div>
+									<!-- /.meta -->
+									
+									<a class="link-slider" href="<%=post.is_a?(Event) ? event_path(title: post.url) : news_path(title: post.url)%>"></a>
+									
+									<div class="slide-content">
+										<h1><a href="<%=post.is_a?(Event) ? event_path(title: post.url) : news_path(title: post.url)%>"><%=post.title%></a></h1>
+									</div>
+									<!-- /.slide-content -->
+								</li>
