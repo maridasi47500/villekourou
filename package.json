@@ -1,5 +1,6 @@
 {
   "name": "villekourou",
+  "author": "cleojeanne",
   "private": true,
   "dependencies": {
     "@rails/ujs": "^6.0.0",
